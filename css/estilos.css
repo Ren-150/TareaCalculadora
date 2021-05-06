@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(192, 191, 191);
+    box-sizing: border-box;
+}
+
+#cajaprincipal{
+    margin: 0 auto;
+    padding-top: 30px;
+    background-color: darkslategray;
+    width: 30%;
+    max-width: 1000px;
+    height: 460px;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+#pantalla{
+    margin: auto;
+    background-color: rgb(208, 236, 236);
+    width: 85%;
+    height: 120px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "linea1 linea1";
+}
+
+.linea1{
+    grid-area: linea1;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.linea1 > input{
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    text-align: right;
+}
+
+#cajateclados{
+    width: 85%;
+    height: 250px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 17px;
+}
+
+.teclado1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+}
+
+.teclado1 > button{
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.teclado2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+}
+
+.teclado2 > button{
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.teclado2 > #CLEAR{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.teclado2 > #IGUAL{
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
